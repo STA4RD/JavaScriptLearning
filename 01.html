@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script>
+
+debugger
+
+//проверка логина и пароля
+
+var defLogin = 'admin';
+var defPaswd = 'qwerty';
+var login;
+var paswd;
+do {
+	login =  prompt('Введите логин: ', 'login');
+	if (login == null) { 
+		die(); 
+	} else if (login != defLogin) {
+		alert('Попродуйте еще!');
+		continue;
+	}
+	paswd =  prompt('Введите пароль: ', 'paswd');
+	if (paswd == null) { 
+		die(); 
+	}
+
+} while (login != defLogin || paswd != defPaswd);
+
+alert('Ура!');
+
+
+</script>

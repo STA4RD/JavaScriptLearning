@@ -26,5 +26,20 @@ do {
 
 alert('Ура!');
 
+//типа калькулятор валют
+
+var ratios = {
+    usdB : 28,
+	usdS : 27,
+	eurB : 36,
+	eurS : 35
+}
+var kurs;
+var m = prompt("val?", "uSd");
+var lm = m.toLowerCase();
+var ask = +prompt("How match?", 0);
+var sell = confirm ("sell?") ? kurs = lm+"S" : kurs = lm+"B";
+alert(ask * ratios[kurs]);
+
 
 </script>

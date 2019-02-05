@@ -1,0 +1,195 @@
+<head>
+	<meta charset="utf-8" http-equiv="content-type" content="text/html; charset=windows-1251" />
+
+	<style>
+	table,td {
+		border: 3px solid #555;
+		padding: 5px 10px;
+		margin: 10px;
+		text-align: center;
+	}
+	td {
+		width: 15px;
+	}
+</style>
+</head>
+<body> 
+	<form name="my">
+		<input name="one" value="1">
+		<input name="two" value="2">
+	</form>
+	<script>
+//Задания взяты из http://gitlab.a-level.com.ua/gitgod/FrontendLectures/src/master/03StructuresAndEvaluationsLoopsHomeWork.md
+		debugger
+
+		do {
+			var a = prompt("cho?");
+		} while (a == null);
+
+		do {
+			var a = console.log("cho?");
+		} while (Math.random() < 0.99);
+
+		for (var i = 1; true; i++) {
+			if (Math.random() > 0.9) {
+				alert(i);
+				break;
+			}
+			console.log(i);
+		}
+
+		do {
+			var a = prompt("cho?");
+		} while (a == null);
+
+		for (var i; i == null; i = prompt("cho?")) {
+		}
+
+		var n = +prompt("N?");
+		var sum = 0;
+		for (var i = 1; i < 1 + 3*(n-1); sum += i+=3) {
+			console.log(i);
+		}
+		console.log(sum);
+
+		var str = '';
+		for (var i = 1; i <= 11; i++ ) {
+			if (i%2 == 1) {
+				str += ' ';
+		// console.log(str)
+	} else if (i%2 == 0) {
+		str += '#';
+	}
+} console.log(str);
+
+var str = ''; 
+for (var i = 3; i <= 10; i++ ) {
+	i%10 != 0 ? str += i : str += '0';}
+	// if (i != 10) {
+	// 	str += i;
+	// 	console.log(str)
+	// } else 	str += '0';
+	// }
+	console.log(str);
+
+	var str="";
+	for (var x = 0; x <= 9; x++) {
+		for (var y = 0; y <= 9; y++) {
+			str += y; 
+		}
+		str += "\n";
+	}
+	console.log(str);
+
+	var board="";
+	var x = 12;
+	var y = 10;
+	for (var yi = 1; yi <= y; yi++) {
+		if (yi%2 != 0) {
+			for (var xi = 1; xi <= x; xi++) {
+				if (xi%2 == 0) {
+					board += "." ; 
+				} else board += "#" ;
+			}
+		} else if (yi%2 == 0) {
+			for (xi = 1; xi <= x; xi++) {
+				if (xi%2 == 0) {
+					board += "#" ; 
+				} else board += "." ;
+			}
+		}
+		board += "\n";
+	} 
+	console.log(board);
+
+	var arr = [];
+	for (var i = 1; i <= 10; i++) {
+		arr.push(i*i);
+	}
+	console.log(arr);
+
+	var arr = [];
+	for (var a = 1; a < 10; a++) {
+		arr[a] = [];
+		for (var b = 1; b < 10; b++) {
+		// console.log(b);
+		arr[a][b] = a*b;
+	}
+}
+console.log(arr);
+console.log(arr[7][2]);
+
+var arr = [];
+for (var a = 1; a <= 10; a++) {
+	arr[a] = [];
+	for (var b = 1; b <= 10; b++) {
+		arr[a][b] = a*b;
+	}
+}
+document.write("<table>");
+for (var key in arr ) {
+	document.write("<tr>");
+	for (var k in arr[key]){
+		document.write("<td>" + arr[key][k] + "</td>");
+	}
+	document.write("</tr>");
+}
+document.write("</table>");
+
+document.write("<table id='math'></table>");
+var arr = [];
+for (var a = 1; a <= 10; a++) {
+	arr[a] = [];
+	for (var b = 1; b <= 10; b++) {
+		// console.log(b);
+		arr[a][b] = a*b;
+	}
+}
+for (var key in arr ) {
+	let tr = document.createElement("tr");
+	math.appendChild(tr);
+	for (var k in arr[key]){
+		let td = document.createElement("td");
+		td.innerText = arr[key][k];
+		tr.appendChild(td);
+	}
+}
+
+
+var arr = ["sss", "asd", "var", "Vasya", "asd", "Asd", "asD"];
+while (arr.indexOf("asd") != -1) {
+	arr[arr.indexOf("asd")] = null;
+}
+console.log(arr);
+
+
+var arr = ["sss", "asd", "var", "Vasya", "asd", "Asd", "asD"];
+for ( var key in arr) {
+	// console.log(arr[key]);
+	if (arr[key].toLowerCase() == "asd") {
+		arr[key] = null;
+	}
+}
+console.log(arr);
+
+fetch('http://students.a-level.com.ua:10012', {
+	method: 'POST',
+	body: JSON.stringify({
+		func: 'getMessages', 
+		messageId: 0,
+	})
+})
+.then(r => r.json())
+.then(data => {
+	console.log(data);
+})
+
+
+var form = document.forms.my; // можно document.forms[0]
+
+    var elem = form.elements.one; // можно form.elements[0]
+
+    alert( elem.value ); // 1
+
+</script> 
+
